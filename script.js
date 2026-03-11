@@ -6,7 +6,7 @@ const entriesContainer = document.getElementById("entries");
 const downloadBtn = document.getElementById("download-pdf");
 
 let entries =[];
-let currentDay = "monday";;
+let currentDay = "monday";
 
 //day switching
 const dayButtons = document.querySelectorAll(".day-btn");
@@ -74,12 +74,13 @@ function renderEntries(){
 
 }
 
+
 //time slot generator 
 const startTimeInput = document.getElementById("start-time");
 const durationInput = document.getElementById("duration");
 const generateSlotBtn = document.getElementById("generate-slot");
 
-ggenerateSlotBtn.addEventListener("click", () => {
+generateSlotBtn.addEventListener("click", () => {
     const startTime = startTimeInput.value;
     const duration = parseInt(durationInput.value);
 
@@ -97,7 +98,7 @@ ggenerateSlotBtn.addEventListener("click", () => {
     const formatTime = (date) => 
         date.toLocaleTimeString([], {hour: "2-digit" , minute: "2-digit"});
 
-    const timeSlot = `${formatTime(startDate)} ${formatTime(endDate)}`;
+    const timeSlot = `${formatTime(startDate)} - ${formatTime(endDate)}`;
     timeInput.value = timeSlot;
 });
 
@@ -107,7 +108,7 @@ downloadBtn.addEventListener("click", ()=>{
     const groupedEntries = groupEntriesByDay();
 
     let content = `
-     <div style="padding:1rem; font-family:'segoe UI" , sans-serif;>
+     <div style="padding:1rem; font-family:Segoe UI', sans-serif; , sans-serif;>
      <h1 style="text-align:center; color:#7b4ca0;">📚Weekly Study Timetable</h1>
      </div>
     `;
@@ -146,14 +147,14 @@ downloadBtn.addEventListener("click", ()=>{
 //group entries by day
 function groupEntriesByDay(){
     const grouped = {
-        Monday:[],
-        Tuesday:[],
-        Wednesday:[],
-        Thursday:[],
-        Friday:[],
-        Saturday:[],
-        Sunday:[]
-    };
+    monday:[],
+    tuesday:[],
+    wednesday:[],
+    thursday:[],
+    friday:[],
+    saturday:[],
+    sunday:[]
+};
     entries.forEach(entry => {
         grouped[entry.day].push(entry);
     });
