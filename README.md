@@ -8,7 +8,7 @@ A simple and interactive **study timetable planner** that helps students organiz
 
 ## 📸 Project Screenshot
 
-![Smart Study Planner](output.png)
+![Smart Study Planner](output/output.png)
 
 ## ✨ Features
 
