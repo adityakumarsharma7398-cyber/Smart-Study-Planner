@@ -4,7 +4,7 @@ A simple and interactive **study timetable planner** that helps students organiz
 
 ## 🚀 Live Demo
 
-🔗[https://responsive-food-website16.netlify.app/](https://smart-study-planner9.netlify.app/)
+🔗https://smart-study-planner9.netlify.app/
 
 ## 📸 Project Screenshot
 
